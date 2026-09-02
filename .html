@@ -1,418 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fútbol</title>
 
-    <title>Fútbol & Lógica | Guía 3</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            font-family: Arial, sans-serif;
+        }
 
-    <link rel="stylesheet" href="style.css">
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 700px) {
+            .galeria {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- MENÚ -->
-    <nav class="navbar">
-
-        <div class="logo">
-            ⚽ Fútbol<span>Logic</span>
-        </div>
-
-        <div class="menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#conceptos">Conceptos</a>
-            <a href="#proyecto">Proyecto</a>
-            <a href="#desarrollo">Desarrollo</a>
-            <a href="#contacto">Conclusión</a>
-        </div>
-
-    </nav>
-
-
-    <!-- INICIO -->
-    <header id="inicio" class="hero">
-
-        <div class="hero-text">
-
-            <p class="small-title">
-                SENA · TÉCNICO EN PROGRAMACIÓN DE SOFTWARE
-            </p>
-
-            <h1>
-                Lógica de
-                <span>Programación</span>
-                aplicada al Fútbol
-            </h1>
-
-            <p>
-                Aprende los fundamentos de la programación mediante
-                ejemplos relacionados con el fútbol, los equipos,
-                los jugadores y las estadísticas deportivas.
-            </p>
-
-            <a href="#conceptos" class="btn">
-                Comenzar ⚽
-            </a>
-
-        </div>
-
-
-        <div class="hero-image">
-
-            <img
-                src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=80"
-                alt="Jugador de fútbol en una cancha">
-
-        </div>
-
-    </header>
-
-
-    <!-- CONCEPTOS -->
-    <section id="conceptos" class="section">
-
-        <p class="section-tag">FUNDAMENTOS</p>
-
-        <h2>Conceptos básicos</h2>
-
-        <p class="section-description">
-            La programación puede compararse con la estrategia de un
-            equipo de fútbol: primero analizamos la situación,
-            después tomamos decisiones y finalmente obtenemos un resultado.
-        </p>
-
-
-        <div class="cards">
-
-            <div class="card">
-
-                <img
-                    src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80"
-                    alt="Jugador de fútbol">
-
-                <div class="icon">01</div>
-
-                <h3>Variables</h3>
-
-                <p>
-                    Las variables almacenan información que puede cambiar
-                    durante la ejecución de un programa.
-                </p>
-
-                <code>goles = 3</code>
-
-            </div>
-
-
-            <div class="card">
-
-                <img
-                    src="https://images.unsplash.com/photo-1575361204480-aadea25e6e68?auto=format&fit=crop&w=700&q=80"
-                    alt="Estadio de fútbol">
-
-                <div class="icon">02</div>
-
-                <h3>Tipos de datos</h3>
-
-                <p>
-                    Permiten identificar qué tipo de información estamos
-                    almacenando dentro de una variable.
-                </p>
-
-                <code>equipo = "Colombia"</code>
-
-            </div>
-
-
-            <div class="card">
-
-                <img
-                    src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=700&q=80"
-                    alt="Balón de fútbol">
-
-                <div class="icon">03</div>
-
-                <h3>Operadores</h3>
-
-                <p>
-                    Permiten realizar operaciones matemáticas,
-                    comparaciones y operaciones lógicas.
-                </p>
-
-                <code>goles + 2</code>
-
-            </div>
-
-
-            <div class="card">
-
-                <img
-                    src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=700&q=80"
-                    alt="Cancha de fútbol">
-
-                <div class="icon">04</div>
-
-                <h3>Algoritmos</h3>
-
-                <p>
-                    Son instrucciones organizadas paso a paso para
-                    solucionar un problema determinado.
-                </p>
-
-                <code>Inicio → Juego → Gol</code>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PROYECTO -->
-    <section id="proyecto" class="section dark-section">
-
-        <p class="section-tag">PROYECTO DE SOFTWARE</p>
-
-        <h2>Distribución del proyecto</h2>
-
-        <p class="section-description">
-            Una programación bien organizada es como un equipo de fútbol:
-            cada actividad tiene una función importante para alcanzar el objetivo.
-        </p>
-
-
-        <div class="table-container">
-
-            <table>
-
-                <thead>
-
-                    <tr>
-                        <th>Actividad</th>
-                        <th>Porcentaje</th>
-                        <th>Estado</th>
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>🏟️ Diseño de interfaz</td>
-                        <td>20%</td>
-                        <td class="complete">Completado</td>
-                    </tr>
-
-                    <tr>
-                        <td>⚽ Desarrollo web</td>
-                        <td>25%</td>
-                        <td class="complete">Completado</td>
-                    </tr>
-
-                    <tr>
-                        <td>🧠 Lógica de programación</td>
-                        <td>30%</td>
-                        <td class="process">En proceso</td>
-                    </tr>
-
-                    <tr>
-                        <td>🥅 Pruebas</td>
-                        <td>15%</td>
-                        <td class="pending">Pendiente</td>
-                    </tr>
-
-                    <tr>
-                        <td>📋 Documentación</td>
-                        <td>10%</td>
-                        <td class="process">En proceso</td>
-                    </tr>
-
-                    <tr class="total">
-                        <td><strong>🏆 Total</strong></td>
-                        <td><strong>100%</strong></td>
-                        <td><strong>Proyecto</strong></td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-    </section>
-
-
-    <!-- DESARROLLO -->
-    <section id="desarrollo" class="section">
-
-        <div class="about">
-
-            <div class="about-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1000&q=80"
-                    alt="Partido de fútbol">
-
-            </div>
-
-
-            <div class="about-text">
-
-                <p class="section-tag">
-                    DESARROLLO
-                </p>
-
-                <h2>Programar también es jugar en equipo</h2>
-
-                <p>
-                    La programación permite transformar problemas reales
-                    en soluciones mediante instrucciones que pueden ser
-                    interpretadas por un computador.
-                </p>
-
-                <p>
-                    En el fútbol ocurre algo similar. Un equipo analiza
-                    la situación, toma decisiones y sigue una estrategia
-                    para conseguir un resultado.
-                </p>
-
-                <p>
-                    Por eso podemos utilizar situaciones futbolísticas
-                    para comprender variables, condiciones, operadores
-                    y algoritmos.
-                </p>
-
-                <a href="#video" class="btn">
-                    Ver contenido ⚽
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ESTADÍSTICAS -->
-    <section class="stats-section">
-
-        <p class="section-tag">FÚTBOL Y PROGRAMACIÓN</p>
-
-        <h2>Analizando un partido</h2>
-
-        <p>
-            Las estadísticas también pueden almacenarse y procesarse
-            mediante programas informáticos.
-        </p>
-
-
-        <div class="stats">
-
-            <div class="stat">
-                <span>⚽</span>
-                <strong>3</strong>
-                <small>Goles</small>
-            </div>
-
-            <div class="stat">
-                <span>🎯</span>
-                <strong>8</strong>
-                <small>Tiros</small>
-            </div>
-
-            <div class="stat">
-                <span>🏃</span>
-                <strong>65%</strong>
-                <small>Posesión</small>
-            </div>
-
-            <div class="stat">
-                <span>🧤</span>
-                <strong>5</strong>
-                <small>Atajadas</small>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- VIDEO -->
-    <section id="video" class="video-section">
-
-        <p class="section-tag">
-            RECURSO MULTIMEDIA
-        </p>
-
-        <h2>Aprende sobre programación</h2>
-
-        <p>
-            Este recurso explica conceptos relacionados con Python,
-            uno de los lenguajes utilizados para aprender programación.
-        </p>
-
-
-        <div class="video-container">
-
-            <iframe
-                src="https://www.youtube.com/embed/rfscVS0vtbw"
-                title="Introducción a Python"
-                allowfullscreen>
-            </iframe>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONCLUSIÓN -->
-    <section id="contacto" class="section conclusion">
-
-        <p class="section-tag">
-            CONCLUSIÓN
-        </p>
-
-        <h2>La lógica es el comienzo</h2>
-
-        <p>
-            El aprendizaje de la lógica de programación permite desarrollar
-            habilidades para analizar problemas y construir soluciones
-            mediante algoritmos.
-        </p>
-
-        <p>
-            Así como un equipo de fútbol necesita estrategia, comunicación
-            y organización para conseguir un gol, un programa necesita
-            lógica, instrucciones y datos para obtener un resultado.
-        </p>
-
-
-        <div class="quote">
-            "Una buena estrategia gana partidos;
-            una buena lógica construye programas."
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer>
-
-        <div class="footer-logo">
-            ⚽ Fútbol<span>Logic</span>
-        </div>
-
-        <p>
-            Guía 3 · Lógica de Programación y Algoritmia
-        </p>
-
-        <p>
-            Técnico en Programación de Software · SENA
-        </p>
-
-    </footer>
-
+    <div class="galeria">
+
+        <img src="imagenes/futbol1.jpg" alt="Fútbol">
+        <img src="imagenes/futbol2.jpg" alt="Fútbol">
+        <img src="imagenes/futbol3.jpg" alt="Fútbol">
+        <img src="imagenes/futbol4.jpg" alt="Fútbol">
+        <img src="imagenes/futbol5.jpg" alt="Fútbol">
+        <img src="imagenes/futbol6.jpg" alt="Fútbol">
+        <img src="imagenes/futbol7.jpg" alt="Fútbol">
+        <img src="imagenes/futbol8.jpg" alt="Fútbol">
+        <img src="imagenes/futbol9.jpg" alt="Fútbol">
+
+    </div>
 
 </body>
 </html>
